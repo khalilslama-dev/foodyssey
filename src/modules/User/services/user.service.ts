@@ -13,8 +13,8 @@ export class UserService {
     async deleteUser(id: string): Promise<DeleteResult> {
         return await this.userRepository.delete(id);
     }
-    async updateUser(id: string, updateRestaurantDto: UpdateUserDto) {
-        return await this.userRepository.save(updateRestaurantDto);
+    async updateUser(id: string, updateUserDto: UpdateUserDto) {
+        return await this.userRepository.update(id,updateUserDto);
     }
     async createUser(createUserDto: CreateUserDto): Promise<UserEntity> {
         return await this.userRepository.save(createUserDto);
