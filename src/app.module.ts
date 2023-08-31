@@ -11,17 +11,19 @@ import { SnakeNamingStrategy } from './strategies/snake-naming.strategies';
   imports: [
     UserModule,
     RestaurantModule,
-    TypeOrmModule.forRoot({ type: 'mysql',
-    host: 'localhost',
-    port: 3306,
-    username: 'root',
-    password: '',
-    database: 'test',
-    entities: [RestaurantEntity],
-    namingStrategy: new SnakeNamingStrategy(),
-    synchronize: true,})
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: '',
+      database: 'test',
+      entities: [RestaurantEntity],
+      namingStrategy: new SnakeNamingStrategy(),
+      synchronize: true,
+    })
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
