@@ -25,7 +25,7 @@ export class RestaurantService{
     }
 
     async updateRestaurant(id,updateRestaurantDto: UpdateRestaurantDto){
-        return await this.restaurantRepository.save(updateRestaurantDto);
+        return await this.restaurantRepository.update(id,updateRestaurantDto);
     }
     
     async deleteRestaurant(id)
