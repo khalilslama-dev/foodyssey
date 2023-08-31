@@ -30,7 +30,6 @@ export class RestaurantService{
     
     async deleteRestaurant(id)
     {
-        Logger.log(this.restaurantRepository);
-        return await this.restaurantRepository;
+        return await this.restaurantRepository.delete(id);
     }
 }

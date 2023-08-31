@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UserModule } from './modules/user/user.module';
+import { UserModule } from './modules/User/user.module';
 import { RestaurantModule } from './modules/Restaurant/restaurant.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RestaurantEntity } from './modules/Restaurant/entities/restaurant.entity';
